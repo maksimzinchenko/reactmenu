@@ -1,0 +1,11 @@
+.iconsvg{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url( '../assets/menu-button.svg' );
+    background-position:center;
+    background-size:cover;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid gray;
+    border-radius:s 10px;
+}

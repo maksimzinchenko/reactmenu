@@ -1,0 +1,23 @@
+.buttonmain{
+    display: block;
+    /* width: 200px; */
+    /* height: 80px; */
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    gap: 10px;
+    background-color: #F2AB39;
+}
+
+.buttonTitle {
+    font-size: 30px;
+}
+
+.cartItemsCounter {
+    border-radius: 15px;
+    background-color: brown;
+    padding: 10px;
+    font-size: 30px;
+}

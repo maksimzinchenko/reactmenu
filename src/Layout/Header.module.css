@@ -1,0 +1,12 @@
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px 10px;
+    background-color: #FFD954;
+}
+
+.menuName {
+    color: rgb(0, 0, 0);
+}
+
