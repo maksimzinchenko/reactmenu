@@ -1,8 +1,14 @@
+import { Fragment } from "react";
+
 import AvailableMeals from "./AvailableMeals";
+import RecommendedMeals from "./RecommendedMeals";
 
 const Meals = props => {
     return (
-        <AvailableMeals />
+        <Fragment>
+            <AvailableMeals />
+            <RecommendedMeals />
+        </Fragment>
     );
 }
 
