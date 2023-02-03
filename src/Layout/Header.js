@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className={classes.head}>
             <img src={logoImage} alt="Logo"/>
-            <h1 className={classes.menuName}>Menu</h1>
+            <h1 className={classes.menuName}>Cafe Menu</h1>
             <HeaderCartButton />
         </header>
     );
