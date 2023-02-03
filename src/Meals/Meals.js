@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import AvailableMeals from "./AvailableMeals";
-import RecommendedMeals from "./RecommendedMeals";
+// import RecommendedMeals from "./RecommendedMeals";
 
 const Meals = props => {
     return (
