@@ -6,12 +6,12 @@ import logoImage from '../assets/logo.svg';
 
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = props => {
     return (
         <header className={classes.head}>
             <img src={logoImage} alt="Logo"/>
             <h1 className={classes.menuName}>Cafe Menu</h1>
-            <HeaderCartButton />
+            <HeaderCartButton onShowCartHandler={props.onShowCartHandler}/>
         </header>
     );
 }
