@@ -22,3 +22,26 @@
     padding: 5px 10px;
     font-size: 12px;
 }
+
+.bump {
+    animation: bump 300ms ease-out;
+  }
+  
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.95);
+    }
+    30% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1.10);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

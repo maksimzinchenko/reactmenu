@@ -1,5 +1,7 @@
 .mealsCartList {
     display: flex;
     flex-direction: column;
-    
+    max-height: 30rem;
+    overflow: scroll;
 }
+
