@@ -1,0 +1,23 @@
+.cartItem {
+    display: flex;
+    background-color: aqua;
+}
+
+.itemInfo {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    width: 300px;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.actions {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    justify-content: space-around;
+    padding: 5px 10px;
+}

@@ -1,0 +1,5 @@
+.mealsCartList {
+    display: flex;
+    flex-direction: column;
+    
+}

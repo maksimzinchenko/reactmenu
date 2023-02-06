@@ -19,6 +19,7 @@ const AvailableMeals = () => {
   const mealsList = MEALS_START.map((meal) => (
     <MealItem
         key={meal.id}
+        id={meal.id}
       title={meal.name}
       description={meal.description}
       price={meal.price}
@@ -28,7 +29,7 @@ const AvailableMeals = () => {
   return (
     <section className={classes.some}>
       <Card>
-        <ul>{mealsList}</ul>
+        <ul className={classes.mealList}>{mealsList}</ul>
       </Card>
     </section>
   );
