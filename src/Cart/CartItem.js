@@ -1,7 +1,7 @@
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
-  const price = `$${props.price * props.amount}`;
+  // const price = `$${props.price * props.amount}`;
   const amount = `$${props.price * props.amount}`;
 
   return (
