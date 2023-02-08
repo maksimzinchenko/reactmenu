@@ -8,20 +8,24 @@ import MealItemForm from "./MealItemForm";
 import MealImage from "../../media/bakery.jpg";
 
 const MealItem = (props) => {
-
   const cartCtx = useContext(CartContext);
 
   const price = `$${props.price.toFixed(2)}`;
 
-const addToCartHandler = amount => {
-  console.log(props);
-  cartCtx.addItem({
-    id: props.id,
-    name: props.title,
-    amount: amount,
-    price: props.price
-  });
-}
+  const itemCount = cartCtx.getItemCount(props.id);
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.title,
+      amount: amount,
+      price: props.price,
+    });
+  };
+
+  const removeFromCartHandler = (amount) => {
+    cartCtx.removeItem(props.id);
+  };
 
   return (
     <li className={classes.mealELement}>
@@ -31,7 +35,11 @@ const addToCartHandler = amount => {
       </div>
       {/* <div className={classes.mealDescription}>{props.description}</div> */}
       <div className={classes.mealPrice}>{price}</div>
-      <MealItemForm onAddToCart={addToCartHandler}/>
+      <MealItemForm
+        itemCount={itemCount}
+        onAddToCart={addToCartHandler}
+        onRemoveFromCart={removeFromCartHandler}
+      />
     </li>
   );
 };

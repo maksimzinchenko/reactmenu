@@ -9,11 +9,11 @@ li {
     padding: 2px;
     border: 1px solid gray;
     width: 150px;
-    border-radius: 2px;
     font-size: 10px;
     background-color: #F2AB39;
     justify-content: space-between;
     height: 180px;
+    border-radius: 15px;
 }
 
 .mealTitle {
@@ -36,5 +36,7 @@ li {
     width: 145px;
     height: 100px;
     overflow: hidden;
-    border-radius: 2px 2px 0 0;
+    border-radius: 15px 15px 0 0;
 }
+
+
