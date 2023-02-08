@@ -20,8 +20,6 @@ function App() {
     setCartIsShown(false);
   }
 
-
-
   return (
     <CartProvider>
       {cartIsShown && <Cart onHideCartHandler={hideCartHandler} />}

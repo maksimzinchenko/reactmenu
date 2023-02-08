@@ -29,6 +29,7 @@ const MealItem = (props) => {
 
   return (
     <li className={classes.mealELement}>
+      <div className={classes.mealItemWrapper}>
       <img className={classes.mealImage} src={MealImage} alt="bakery" />
       <div>
         <h3 className={classes.mealTitle}>{props.title}</h3>
@@ -40,6 +41,7 @@ const MealItem = (props) => {
         onAddToCart={addToCartHandler}
         onRemoveFromCart={removeFromCartHandler}
       />
+      </div>
     </li>
   );
 };

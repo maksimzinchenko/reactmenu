@@ -9,7 +9,7 @@ import HeaderCartButton from "./HeaderCartButton";
 const Header = props => {
     return (
         <header className={classes.head}>
-            <img src={logoImage} alt="Logo"/>
+            <img className={classes.logo} src={logoImage} alt="Logo"/>
             <h1 className={classes.menuName}>Cafe Menu</h1>
             <HeaderCartButton onShowCartHandler={props.onShowCartHandler}/>
         </header>

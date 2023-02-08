@@ -11,12 +11,12 @@ const MealItemForm = (props) => {
 
   return (
     <div className={classes.cardControls}>
-      <button className={classes.addButton} onClick={onAddHandler}>
-        ADD
-      </button>
-      <input className={classes.itemCounter} value={props.itemCount} />
       <button className={classes.removeButton} onClick={onRemoveHandler}>
         REMOVE
+      </button>
+      <input className={classes.itemCounter} value={props.itemCount} />
+      <button className={classes.addButton} onClick={onAddHandler}>
+        ADD
       </button>
     </div>
   );
