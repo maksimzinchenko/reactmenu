@@ -8,6 +8,8 @@ import CartContext from "../store/cart-context";
 
 import CartItem from "./CartItem";
 
+import CartItemsTableHeader from "./CartItemsTableHeader";
+
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
@@ -25,7 +27,7 @@ const Cart = (props) => {
   };
 
   const cartItems = (
-    <ul className={classes.mealsCartList}>
+    <ul className={classes.mealsCartList}><CartItemsTableHeader />
       {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}

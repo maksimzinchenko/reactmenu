@@ -3,6 +3,7 @@ import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 
+
 const MEALS_START = [
   { id: 1, name: "Meal 1. Long description", description: "Meal 1 description. ", price: 15 },
   { id: 2, name: "Meal 2", description: "Meal 2 description", price: 10 },
@@ -33,7 +34,9 @@ const AvailableMeals = () => {
   return (
     <section className={classes.some}>
       <Card>
-        <ul className={classes.mealList}>{mealsList}</ul>
+        <ul className={classes.mealList}>
+          
+          {mealsList}</ul>
       </Card>
     </section>
   );

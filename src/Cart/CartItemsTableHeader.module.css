@@ -1,0 +1,17 @@
+.cartItemHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: baseline;
+    border: 1px solid gray;
+    border-width: 0 0 1px 0;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.itemTitle {
+    margin: 0;
+    font-size: 14px;
+    padding-right: 10px;
+}

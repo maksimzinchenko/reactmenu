@@ -6,59 +6,114 @@
     display: flex;
     justify-content: space-between;
     /* background-color: #FFD954; */
+    border: 1px solid gray;
+    border-width: 0 0 1px 0;
+    /* background-color: darkkhaki; */
 }
 
 .itemInfo {
     display: flex;
     align-items: center;
-    border: 1px solid gray;
-    border-width: 0 0 1px 0;
     width: 100%;
     justify-content: space-between;
-    padding: 5px 10px;
+    padding: 10px 10px;
+    /* background-color: coral; */
 }
 
 .itemTitle {
     margin: 0;
-    font-size: 18px;
+    font-size: 12px;
+    width: 50%;
+    /* background-color: brown; */
 }
 
 .actions {
-    border: 1px solid gray;
-    border-width: 0 0 1px 0;
+    /* border: 1px solid gray;
+    border-width: 0 0 1px 0; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 140px;
+    width: 30%;
     justify-content: center;
-    padding: 5px 10px;
+    padding: 5px 5px;
+    /* background-color: blueviolet; */
 }
 
-.summary {
+/* .summary {
     padding: 5px;
     font-size: 14px;
+} */
+
+.subsum {
+    display: flex;
+    width: 60px;
+    padding: 4px;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    align-items: center;
 }
 
 .removeButton{
-    display: block;
-    width: 60px;
-    padding: 8px;
-    border-radius: 15px 0 0 15px;
-    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    border-radius: 15px;
+    font-weight: 700;
     font-size: 20px;
     line-height: 10px;
     background-color: red;
     color: white;
+    border: 1px solid gray;
 }
 
 .addButton {
-    display: block;
-    width: 60px;
-    padding: 8px;
-    border-radius: 0 15px 15px 0;
-    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    border-radius:15px;
+    font-weight: 700;
     font-size: 20px;
     line-height: 10px;
     background-color: green;
     color: white;
+    border: 1px solid gray;
+}
+
+.price {
+    display: block;
+    padding: 5px;
+    width: 50px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    /* text-align: center; */
+    /* border: 2px solid grey;
+    border-width: 2px 0; */
+    /* background-color: aquamarine; */
+}
+
+.itemSubtotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
 }
