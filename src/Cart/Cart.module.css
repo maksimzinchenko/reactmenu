@@ -6,7 +6,7 @@
     width: 95%;
     max-height: 25rem;
     overflow: scroll;
-    scrollbar-width: 20px;
+    scrollbar-width: thin;
     background-color: white;
 }
 
@@ -47,3 +47,4 @@
     font-size: 18px;
     border-radius: 15px;
 }
+

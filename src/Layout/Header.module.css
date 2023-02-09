@@ -1,13 +1,19 @@
 .head {
     position: fixed;
     width: 100%;
+    background-color: #FFD954;
+}
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px 10px;
-    background-color: #FFD954;
+    
     height: 60px;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .menuName {

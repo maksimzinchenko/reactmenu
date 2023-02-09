@@ -24,10 +24,13 @@ function App() {
     <CartProvider>
       {cartIsShown && <Cart onHideCartHandler={hideCartHandler} />}
       <Header onShowCartHandler={showCartHandler} />
+      <div className={classes.container}>
       <main className={classes.some}>
         <Meals />
       </main>
+      </div>
     </CartProvider>
+    
   );
 }
 
