@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
 import classes from "./AvailableMeals.module.css";
@@ -13,13 +13,23 @@ const client = axios.create({
 const AvailableMeals = () => {
   const [meals, setMealsList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  let errorMessage = useRef();
 
   useEffect(() => {
     async function getMeals() {
       setIsLoading(true);
-      const response = await client.get("/");
+      try {
+        const response = await client.get("/");
+        setMealsList(response.data);
+      } catch (error) {
+        setIsLoading(false);
+        errorMessage.current = error.message;
+        setIsError(true);
+        setMealsList([]);
+      }
       setIsLoading(false);
-      setMealsList(response.data);
     }
     getMeals();
   }, []);
@@ -37,7 +47,15 @@ const AvailableMeals = () => {
   return (
     <section className={classes.some}>
       <Card>
-        {!isLoading && <ul className={classes.mealList}>{mealsList}</ul>}
+        {!isLoading && mealsList.length > 0 && (
+          <ul className={classes.mealList}>{mealsList}</ul>
+        )}
+        {!isLoading && !isError && mealsList.length === 0 && (
+          <p className={classes.loadingParagraph}>No meals in menu</p>
+        )}
+        {isError && (
+          <p ref={errorMessage}  className={classes.loadingParagraph}>Something went wrong...</p>
+        )}
         {isLoading && <p className={classes.loadingParagraph}>Loading...</p>}
       </Card>
     </section>
