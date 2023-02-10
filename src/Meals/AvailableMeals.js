@@ -44,19 +44,24 @@ const AvailableMeals = () => {
     />
   ));
 
+  let content = 'Something went wrong...';
+
+  if (mealsList.length > 0){
+    content = <ul className={classes.mealList}>{mealsList}</ul>;
+  }
+
+  if (isError["result"]) {
+    content = <p className={classes.loadingParagraph}>{isError["message"]}</p>;
+  }
+
+  if (isLoading){
+    content = <p className={classes.loadingParagraph}>Loading...</p>;
+  }
+
   return (
     <section className={classes.some}>
       <Card>
-        {!isLoading && mealsList.length > 0 && (
-          <ul className={classes.mealList}>{mealsList}</ul>
-        )}
-        {!isLoading && !isError["result"] && mealsList.length === 0 && (
-          <p className={classes.loadingParagraph}>No meals in menu</p>
-        )}
-        {isError["result"] && (
-          <p className={classes.loadingParagraph}>{isError["message"]}</p>
-        )}
-        {isLoading && <p className={classes.loadingParagraph}>Loading...</p>}
+        {content}
       </Card>
     </section>
   );
