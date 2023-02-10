@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  menu10:
+    build:
+      context: ../../../../fastapi/menurest/
+      dockerfile: ./Dockerfile
+  reactmenu10:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+  nginx:
+    build:
+      context: .
+      dockerfile: ./DockerNginx
+    ports:
+      - 80:80

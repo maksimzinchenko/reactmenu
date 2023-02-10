@@ -14,7 +14,7 @@ const MealItemForm = (props) => {
       <button className={classes.removeButton} onClick={onRemoveHandler}>
         REMOVE
       </button>
-      <input className={classes.itemCounter} value={props.itemCount} />
+      <input className={classes.itemCounter} value={props.itemCount} readOnly/>
       <button className={classes.addButton} onClick={onAddHandler}>
         ADD
       </button>
