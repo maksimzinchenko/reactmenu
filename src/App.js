@@ -2,13 +2,10 @@ import React, { useState } from "react";
 
 import axios from "axios";
 
-import Header from "./Layout/Header";
-import Meals from "./Meals/Meals";
-import Cart from "./Cart/Cart";
-import AddMealForm from "./Meals/MealItem/AddMealForm";
-
-
-
+import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
+import Cart from "./components/Cart/Cart";
+import AddMealForm from "./components/Meals/MealItem/AddMealForm";
 
 import CartProvider from "./store/cartProvider";
 
