@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 
+
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
@@ -14,10 +15,6 @@ import classes from './App.module.css';
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
   const [showAddMealForm, setShowAddMealForm] = useState(false);
-
-  const client = axios.create({
-    baseURL: window.location.origin + "/menu_items",
-  });
 
   const showCartHandler = event => {
     setCartIsShown(true);
@@ -35,8 +32,6 @@ function App() {
   const onCancelAddMealHandler = event => {
     setShowAddMealForm(false);
   }
-
-
 
   const addMealItem = async (newMeal) =>  {
     

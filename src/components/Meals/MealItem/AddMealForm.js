@@ -1,40 +1,52 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 import classes from "./AddMealForm.module.css";
 
 const AddMealForm = (props) => {
-  const mealName = useRef("");
-  const mealPrice = useRef(0);
+  const [mealName, setMealName] = useState('');
+  const [mealPrice, setMealPrice] = useState(0);
+
+  // const {isLoading, isError, sendRequest: sendNewMealRequest} = useHttp();
+
 
   const clearFields = () => {
-    mealName.current.value = '';
-    mealPrice.current.value = 0;
+    setMealName('');
+    setMealPrice(0);
   }
 
   const submitHandler = (event) => {
     event.preventDefault();
 
     const newMeal = {
-      name: mealName.current.value,
-      price: mealPrice.current.value,
+      name: mealName,
+      price: mealPrice,
     };
-    props.onAddMeal(newMeal);
     clearFields();
+    props.onAddMeal(newMeal);
+    
   };
 
   const onCancelHandler = event => {
     props.onCancelAddMeal();
   }
 
+  const mealNameChangeHandler = event => {
+    setMealName(event.target.value);
+  }
+
+  const mealPriceChangeHandler = event => {
+    setMealPrice(event.target.value);
+  }
+
   return (
     <form onSubmit={submitHandler} className={classes.AddMealForm}>
       <div className={classes.control}>
         <label htmlFor="mealName"></label>
-        <input type="text" id="mealName" ref={mealName} />
+        <input type="text" id="mealName" value={mealName} onChange={mealNameChangeHandler} />
       </div>
       <div className={classes.control}>
         <label htmlFor="mealPrice"></label>
-        <input type="number" id="mealPrice" ref={mealPrice} />
+        <input type="number" id="mealPrice" value={mealPrice} onChange={mealPriceChangeHandler}/>
       </div>
       <div className={classes.actions}>
         <button onClick={onCancelHandler} className={classes.cancelButton}>Cancel</button>
