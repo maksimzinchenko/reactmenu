@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
 import classes from "./AvailableMeals.module.css";
@@ -18,21 +18,22 @@ const AvailableMeals = () => {
     message: "Something went wrong...",
   });
 
-  useEffect(() => {
-    async function getMeals() {
-      setIsLoading(true);
-      try {
-        const response = await client.get("/");
-        setMealsList(response.data);
-      } catch (error) {
-        setIsLoading(false);
-        setIsError({ result: true, message: error.message });
-        setMealsList([]);
-      }
+  const getMeals =  useCallback(async function () {
+    setIsLoading(true);
+    try {
+      const response = await client.get("/");
+      setMealsList(response.data);
+    } catch (error) {
       setIsLoading(false);
+      setIsError({ result: true, message: error.message });
+      setMealsList([]);
     }
-    getMeals();
+    setIsLoading(false);
   }, []);
+
+  useEffect(() => {
+    getMeals();
+  }, [getMeals]);
 
   const mealsList = meals.map((meal) => (
     <MealItem
